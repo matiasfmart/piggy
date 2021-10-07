@@ -51,23 +51,6 @@ let flexibles = new gastos();
 let extras = new gastos();
 let ahorro = new ahorrar();
 
-
-
-$.ajax({
-    url: "https://www.dolarsi.com/api/api.php?type=valoresprincipales",
-    dataType: "json",
-    success: function(valor, estado){
-        let dolarCompra = valor[0].casa["compra"];
-        console.log(dolarCompra);
-        $(".dolarCompra").html(dolarCompra);
-
-
-        let dolarBlueCompra = valor[1].casa["compra"];
-        console.log(dolarBlueCompra);
-        $(".dolarBlueCompra").html(dolarBlueCompra);
-    }
-});
-
 $("#bt_ingresos").click(function(){
     $(".ingresos").fadeOut(500, function(){
         $(".gastosFijos").fadeIn(500);
@@ -212,14 +195,21 @@ $("#bt_gastosExtras").click(function(){
             
             /*Si el total de gastos innecesarios o extras es mayor al 30% de los ingresos del usuario ingresa a un bucle para comenzar a reducir los gastos hasta la condicion*/
             if(extras.total() > ingresos*0.3){
-                while(extras.total() > ingresos*0.3){
+                while( (extras.total() > ingresos*0.3) && (ahorro.ahorroMensual() > acum_mensual)){
                     for(let i = extras.lista.length; i >= 0; i--){
-                        for(let j = i; j >= 0; j--){
-                            if (extras.lista[i] > 0) {                            
-                                extras.lista[i]--;  //Utilizo variables replicas de las originales ingresadas por el usuario para no perder informacion
-                                acum_mensual++; //utilizo una variable para acumular el dinero juntado en la reduccion de los gastos
-                            }
+
+                        if (extras.lista[i] > 0) {                            
+                            extras.lista[i]-= i;  //Utilizo variables replicas de las originales ingresadas por el usuario para no perder informacion
+                            acum_mensual+= i; //utilizo una variable para acumular el dinero juntado en la reduccion de los gastos
                         }
+
+
+                        // for(let j = i; j >= 0; j--){
+                        //     if (extras.lista[i] > 0) {                            
+                        //         extras.lista[i]--;  //Utilizo variables replicas de las originales ingresadas por el usuario para no perder informacion
+                        //         acum_mensual++; //utilizo una variable para acumular el dinero juntado en la reduccion de los gastos
+                        //     }
+                        // }
                     }
                 }
     
@@ -229,14 +219,20 @@ $("#bt_gastosExtras").click(function(){
     
                 /*Se ingresa al bucle calculando el total de gastos fijos sumando a los flexibles, pero solo se reducen los gastos flexibles
                 para que de esa manera no se reduzcan los gastos mas importantes que son los fijos (alquileres, luz, agua, gas, estudios etc.) */
-                while( (totalFijosFlex > ingresos*0.5) && (flexibles.total() > 0) ){
+                while( (totalFijosFlex > ingresos*0.5) && (flexibles.total() > 0) && (ahorro.ahorroMensual() > acum_mensual)){
                     for(let i = flexibles.lista.length; i >= 0; i--){
-                        for(let j = i; j >= 0; j--){
-                            if (flexibles.lista[i] > 0) {
-                                flexibles.lista[i]--;
-                                acum_mensual++; //utilizo una variable para acumular el dinero juntado en la reduccion de los gastos
-                            }
+
+                        if (flexibles.lista[i] > 0) {
+                            flexibles.lista[i]-= i;
+                            acum_mensual+= i; //utilizo una variable para acumular el dinero juntado en la reduccion de los gastos
                         }
+
+                        // for(let j = i; j >= 0; j--){
+                        //     if (flexibles.lista[i] > 0) {
+                        //         flexibles.lista[i]--;
+                        //         acum_mensual++; //utilizo una variable para acumular el dinero juntado en la reduccion de los gastos
+                        //     }
+                        // }
                     }
                     totalFijosFlex = fijos.total() + flexibles.total();
                 }
@@ -244,7 +240,7 @@ $("#bt_gastosExtras").click(function(){
             /*Si aun despues de reducir todos los gastos flexibles y extras no se llega a cubrir el ahorro diario, se vuelven a descontar los gastos extras
             hasta cubrir el monto. El objetivo es no descontar los gastos fijos */
             }else if((acum_mensual < ahorro.ahorroMensual()) && (extras.total() > 0) && (flexibles.total() > 0)){
-                while((extras.total() > 0) && (flexibles.total() > 0)){
+                while((extras.total() > 0) && (flexibles.total() > 0) && (acum_mensual < ahorro.ahorroMensual())){
                     if(aux){
                         for(let i = extras.lista.length; i >= 0; i--){
                             if (extras.lista[i] > 0) {                                    
