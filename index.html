@@ -16,22 +16,36 @@
     <body>
         <header>
     <!-- Just an image -->
-            <nav class="navbar">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <a class="navbar-brand" href="./index.html">
                     <img src="./img/logotipo_header.png">piggy
                 </a>
-                <div class="container navs">
-                    <a class="nav-link" href="./index.html">Inicio</a>
-                    <a class="nav-link" href="#">¿Cómo funciona?</a>
-                    <a class="nav-link" href="#">Contactanos</a>
+
+                <div class="container navs collapse navbar-collapse" id="opciones">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">¿Cómo funciona?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contactanos</a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </header>
         <section class="container-fluid inicio" >
             <div class="row">
-                <h1 class="col-md-11 col-xs-10" style="padding: 100px;">Calcula tus gastos, y cumpli tu objetivo de ahorro!</h1>
+                <h1 class="col-md-11 col-sm-10" style="padding: 100px;">Calcula tus gastos, y cumpli tu objetivo de ahorro!</h1>
                 <div class="col-md-4 botones-div">
-                    <a href="./ingresos.html"><button type="button" class="btn btn-outline-primary botones" id="bt_comenzar"">Comenzar</button></a>
+                    <a href="./ingresos.html"><button type="button" class="btn btn-outline-primary botones" id="bt_comenzar">Comenzar</button></a>
                 </div>  
             </div>
         </section>
