@@ -1,17 +1,8 @@
 body{
   color: aliceblue;
 }
-header{
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 100;
-}
 .navbar{
   background-color: rgba(255, 255, 255, 0.938) !important;
-  width: 100%;
-  height: 100px;
-  display: flex;
 }
 .navbar-brand{
   font-family: 'Nunito', sans-serif;
@@ -30,39 +21,17 @@ header{
   color: #297FDC;
   font-size: 22px;
 }
-.dolarNav{
-  width: 25%;
-  color: rgb(0, 21, 46);
-  margin: 0% 5%;
-  display: flex;
-  justify-content: center !important;
-}
-.dolarNav h4{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 1em;
-  display: inline-block;
-  font-weight: 600;
-}
-.usd{
-  color: rgb(5, 168, 26);
-}
-.usdblue{
-  color: #134db8;
-}
-.dolarNav div{
-  margin: 0% 5%;
-}
 h1, h2{
   color: rgb(28, 39, 54);
   font-family: 'Rubik', sans-serif;
   margin: 50px;
-  font-size: 80px;
+  font-size: 4rem;
   font-weight: 700;
 }
 p{
   color: rgb(0, 47, 112);
   margin: 50px;
-  font-size: 20px;
+  font-size: 1rem;
 }
 label{
   color: rgb(0, 21, 46);
@@ -83,8 +52,7 @@ input:hover{
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: 600px 100px;
-  margin-top: 100px;
-  height: 100vh;
+  margin-top: 50px;
 }
 
 .comoFunciona{
@@ -92,7 +60,6 @@ input:hover{
   background-size: 45%;
   background-repeat: no-repeat;
   background-position: 800px 50px;
-  height: 60vh;
 }
 .comoFunciona__img{
   margin: 150px auto;
@@ -103,29 +70,21 @@ input:hover{
 }
 .contactanos{
   height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url("../img/background_contactanos.jpg");
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: 700px 100px;
 }
-.contactanos h1{
-  width: 60%;
-  text-align: left;
-}
 .contactanos h2{
   text-align: center;
   color: white;
-  font-size: 50px;
-  width: 60%;
+  font-size: 2rem;
+  width: 80%;
   margin: 100px auto;
   font-weight: bold;
   background-color:  #297FDC;
 }
 .ing, .gast, .calc{
-  border-right: rgb(25, 26, 104) solid 1px;
   height: 500px;
   transition: .5s;
 }

@@ -14,23 +14,23 @@
         <title>piggy</title>
     </head>
     <body>
-        <header>
     <!-- Just an image -->
-            <nav class="navbar navbar-expand-sm navbar-light bg-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html">
                     <img src="./img/logotipo_header.png">piggy
                 </a>
-
-                <div class="container navs collapse navbar-collapse" id="opciones">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+    
+                <div class="container navs collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="./index.html">Inicio</a>
                         </li>
-
+    
                         <li class="nav-item">
                             <a class="nav-link" href="#">¿Cómo funciona?</a>
                         </li>
@@ -39,19 +39,19 @@
                         </li>
                     </ul>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
         <section class="container-fluid inicio" >
             <div class="row">
-                <h1 class="col-md-11 col-sm-10" style="padding: 100px;">Calcula tus gastos, y cumpli tu objetivo de ahorro!</h1>
+                <h1 class="col-md-11 col-xs-10" >Calcula tus gastos, y cumpli tu objetivo de ahorro!</h1>
                 <div class="col-md-4 botones-div">
                     <a href="./ingresos.html"><button type="button" class="btn btn-outline-primary botones" id="bt_comenzar">Comenzar</button></a>
-                </div>  
+                </div>
             </div>
         </section>
         <section class="container-fluid comoFunciona">
             <div class="row">
-                <div class="col-md-9" style="padding: 30px 100px;">
+                <div class="col-md-12">
                     <h1>Como funciona?</h1>
                     <p>Nunca pensaste porque no te rinde el dinero? O cuando te propones a ahorrar para poder comprarte algo que te gusta o necesitas, no sabes en que dejar de gastar mucho, o poco para poder comprarlo?
                     <br>Piggy esta pensado para esto. El algoritmo de Piggy acomoda tus gastos, los prioriza de mas importantes a menos importantes, y en base a tu objetivo de ahorro calcula (segun tus prioridades) los gastos que deberias reducir, y te indica exactamente cuanto deberias reducir de cada uno para poder lograr ese objetivo!</p>
@@ -60,17 +60,17 @@
         </section>
         <section class="container-fluid pasos">
             <div class="row comoFunciona__img">
-                <div class="col-md-4 container-fluid ing">
+                <div class="col-md-4 col-sm-12 container-fluid ing">
                     <h1>Paso 1</h1>
                     <h1>Calcula el total de tus ingresos y colocalos</h1>
                     <img class="paso1" src="./img/back_ing.jpg" alt="">
                 </div>
-                <div class="col-md-4 container-fluid gast">
+                <div class="col-md-4 col-sm-12 container-fluid gast">
                     <h1>Paso 2</h1>
                     <h1>Ingresa tus gastos</h1>
                     <img class="paso2" src="./img/background_gast.jpg" alt="">
                 </div>
-                <div class="col-md-4 container-fluid calc">
+                <div class="col-md-4 col-sm-12 container-fluid calc">
                     <h1>Paso 3</h1>
                     <h1>Hace caso al plan de ahorro!</h1>
                     <img class="paso3" src="./img/background_calc.jpg" alt="">
@@ -117,7 +117,7 @@
               <a class="text-white" href="https://mdbootstrap.com/">piggy.com</a>
             </div>
             <!-- Copyright -->
-          </footer>
+        </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="./js/script.js"></script> 
