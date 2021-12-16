@@ -8,9 +8,6 @@ body{
   font-family: 'Nunito', sans-serif;
   font-size: 30px;
   color: #297FDC !important;
-  margin: 0%;
-  width: 20%;
-  text-align: center;
 }
 .navs{
   width: 45%;
@@ -86,6 +83,9 @@ input:hover{
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: 700px 100px;
+}
+.contactanos .row{
+  margin: 0 5%;
 }
 .contactanos h2{
   text-align: center;
@@ -255,6 +255,12 @@ input:hover{
 @media only screen and (max-width: 540px) {
   .inicio h1{
     font-size: 14vw;
+  }
+  .comoFunciona h1{
+    font-size: 14vw;
+  }
+  .contactanos h1{
+    font-size: 12vw;
   }
   .ingresos h1{
     font-size: 14vw;
