@@ -65,25 +65,25 @@ input:hover{
   text-align: left;
   font-size: 5vw;
 }
-.comoFunciona{
+/* .comoFunciona{
   background-image: url("../img/background_presentacion.jpg");
   background-size: 45%;
   background-repeat: no-repeat;
   background-position: 800px 50px;
-}
+} */
 .comoFunciona__img{
-  margin: 150px auto;
+  margin: 0px auto;
 }
 .comoFunciona__img h1{
   font-size: 30px;
   text-align: center;
 }
-.contactanos{
+/* .contactanos{
   background-image: url("../img/background_contactanos.jpg");
-  background-size: 50%;
+  background-size: 20%;
   background-repeat: no-repeat;
   background-position: 700px 100px;
-}
+} */
 .contactanos .row{
   margin: 0 5%;
 }
