@@ -25,7 +25,7 @@ h1{
   color: rgb(28, 39, 54);
   font-family: 'Rubik', sans-serif;
   text-align: center;
-  font-size: 300%;
+  font-size: 5vw;
   font-weight: 700;
 }
 h2{
@@ -153,6 +153,10 @@ input:hover{
 .gastosFlexibles .row{
   margin: 5%;
 }
+.gastosFlexibles h1{
+  font-size: 5vw;
+  text-align: left;
+}
 .gastosExtras{
   background-image: url("../img/background_extras.jpg");
   background-size: 60%;
@@ -162,12 +166,17 @@ input:hover{
 .gastosExtras .row{
   margin: 5%;
 }
+.gastosExtras h1{
+  font-size: 5vw;
+  text-align: left;
+}
 .gastosFijos, .gastosFlexibles, .gastosExtras, .calculo{
   display: none;
 }
 .botones-div{
-  display: inline-block;
+  display: inline;
   text-align: center;
+  width: 50%;
 }
 /* .botones{
   color: #297FDC !important;
@@ -251,6 +260,12 @@ input:hover{
     font-size: 14vw;
   }
   .gastosFijos h1{
+    font-size: 14vw;
+  }
+  .gastosFlexibles h1{
+    font-size: 14vw;
+  }
+  .gastosExtras h1{
     font-size: 14vw;
   }
 }
