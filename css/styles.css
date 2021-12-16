@@ -21,11 +21,18 @@ body{
   color: #297FDC;
   font-size: 22px;
 }
-h1, h2{
+h1{
+  color: rgb(28, 39, 54);
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  font-size: 300%;
+  font-weight: 700;
+}
+h2{
   color: rgb(28, 39, 54);
   font-family: 'Rubik', sans-serif;
   margin: 50px;
-  font-size: 4rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 p{
@@ -52,9 +59,15 @@ input:hover{
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: 600px 100px;
-  margin-top: 50px;
+  height: 90vh;
 }
-
+.inicio div{
+  padding: 10%;
+}
+.inicio h1{
+  text-align: left;
+  font-size: 5vw;
+}
 .comoFunciona{
   background-image: url("../img/background_presentacion.jpg");
   background-size: 45%;
@@ -69,7 +82,6 @@ input:hover{
   text-align: center;
 }
 .contactanos{
-  height: 80vh;
   background-image: url("../img/background_contactanos.jpg");
   background-size: 50%;
   background-repeat: no-repeat;
@@ -78,30 +90,30 @@ input:hover{
 .contactanos h2{
   text-align: center;
   color: white;
-  font-size: 2rem;
-  width: 80%;
+  font-size: 5vw;
   margin: 100px auto;
   font-weight: bold;
   background-color:  #297FDC;
 }
 .ing, .gast, .calc{
   height: 500px;
+  padding: 50px 0;
   transition: .5s;
-}
-.calc{
-  border-right: none;
 }
 .ing:hover{
   position: relative;
   transform:scale(1.02);
+  border: solid;
 }
 .gast:hover{  
   position: relative;
   transform:scale(1.02);
+  border: solid;
 }
 .calc:hover{
   position: relative;
   transform:scale(1.02);
+  border: solid;
 }
 .ing img, .gast img, .calc img{
   width: 350px;
@@ -111,11 +123,13 @@ input:hover{
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: 500px 10px;
-  height: 60vh;
-  margin: 100px;
 }
 .ingresos .row{
-  margin-top: 200px;
+  margin: 5%;
+}
+.ingresos h1{
+  font-size: 5vw;
+  text-align: left;
 }
 .gastosFijos{
   background-image: url("../img/background_fijos.jpg");
@@ -124,51 +138,51 @@ input:hover{
   background-position: 500px 10px;
 }
 .gastosFijos .row{
-  margin-top: 200px;
+  margin: 5%;
+}
+.gastosFijos h1{
+  font-size: 5vw;
+  text-align: left;
 }
 .gastosFlexibles{
   background-image: url("../img/background_flexibles.jpg");
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: 500px 10px;
-  height: 60vh;
-  margin-top: 100px;
 }
 .gastosFlexibles .row{
-  margin-top: 200px;
+  margin: 5%;
 }
 .gastosExtras{
   background-image: url("../img/background_extras.jpg");
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: 500px -10px;
-  height: 60vh;
 }
 .gastosExtras .row{
-  margin-top: 200px;
+  margin: 5%;
 }
 .gastosFijos, .gastosFlexibles, .gastosExtras, .calculo{
-  margin: 100px 0;
   display: none;
 }
 .botones-div{
   display: inline-block;
   text-align: center;
 }
-.botones{
+/* .botones{
   color: #297FDC !important;
   border-color: #297FDC !important;
   background-color: transparent !important;
   padding: 10px 30px;
   font-size: 20px;
-}
+} */
 .botones:hover{
   background-color: #297FDC !important;
   color: rgb(255, 255, 255) !important;
   border-color: #297FDC !important;
 }
 .calculo{
-  margin: 150px auto;
+  margin: 50px auto;
 }
 .calculo h4{
   color: rgb(28, 39, 54);
@@ -228,4 +242,15 @@ input:hover{
   color: rgb(5, 168, 26);
   font-family: 'Nunito', sans-serif;
   font-size: 20px;
+}
+@media only screen and (max-width: 540px) {
+  .inicio h1{
+    font-size: 14vw;
+  }
+  .ingresos h1{
+    font-size: 14vw;
+  }
+  .gastosFijos h1{
+    font-size: 14vw;
+  }
 }

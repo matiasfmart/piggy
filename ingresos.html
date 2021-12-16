@@ -12,22 +12,35 @@
         <title>Proyecto Final</title>
     </head>
     <body>
-        <header>
-        <!-- Just an image -->
-            <nav class="navbar">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html">
                     <img src="./img/logotipo_header.png">piggy
                 </a>
-                <div class="container navs">
-                    <a class="nav-link" href="./index.html">Inicio</a>
-                    <a class="nav-link" href="#">¿Cómo funciona?</a>
-                    <a class="nav-link" href="#">Contactanos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+    
+                <div class="container navs collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Inicio</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">¿Cómo funciona?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contactanos</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
         <form class="container ingresos">
             <div class="row">
-                <div class="col-md-9 col-sm-12">
+                <div class="col-md-9 col-sm-12 justify-content-center">
                     <h1 class="">Ingresa tu objetivo de ahorro</h1>
                 </div>
                 <div class="col-md-3">
@@ -46,6 +59,8 @@
                         <input type="number" class="form-control" id="tiempo" aria-describedby="basic-addon3" value="">
                     </div>
                 </div>
+            </div>
+            <div class="row">                
                 <div class="col-md-2 botones-div">
                     <button type="button" class="btn btn-outline-primary botones" id="bt_ingresos" value="submit">Siguiente</button>
                 </div>
@@ -53,16 +68,10 @@
         </form>
         <form class="container gastosFijos">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-10">
                     <h1>Ingresemos tus gastos fijos!</h1>
-                    <div class="col-md-4 botones-div">
-                        <button type="button" class="btn btn-outline-primary botones" id="bt_fijosVolver" value="submit">Volver</button>
-                    </div>
-                    <div class="col-md-4 botones-div">
-                        <button type="button" class="btn btn-outline-primary botones" id="bt_gastosFijos" value="submit">Siguiente</button>
-                    </div>  
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <label class="form-label">Luz</label>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon3">$</span>
@@ -100,17 +109,19 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-3 botones-div">
+                    <button type="button" class="btn btn-outline-primary botones" id="bt_fijosVolver" value="submit">Volver</button>
+                </div>
+                <div class="col-md-6 col-sm-3 botones-div">
+                    <button type="button" class="btn btn-outline-primary botones" id="bt_gastosFijos" value="submit">Siguiente</button>
+                </div>  
+            </div>
         </form>
         <form class="container gastosFlexibles">
             <div class="row">
                 <div class="col-md-9">
                     <h1>Ahora tus gastos flexibles!</h1>
-                    <div class="col-md-4 botones-div">
-                        <button type="button" class="btn btn-outline-primary botones" id="bt_flexiblesVolver" value="submit">Volver</button>
-                    </div>
-                    <div class="col-md-4 botones-div">
-                        <button type="button" class="btn btn-outline-primary botones" id="bt_gastosFlexibles" value="submit">Siguiente</button>
-                    </div>  
                 </div>
                 <div class="col-md-3">
                     <label class="form-label">Medicina Prepaga</label>
@@ -145,17 +156,19 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-4 botones-div">
+                    <button type="button" class="btn btn-outline-primary botones" id="bt_flexiblesVolver" value="submit">Volver</button>
+                </div>
+                <div class="col-md-4 botones-div">
+                    <button type="button" class="btn btn-outline-primary botones" id="bt_gastosFlexibles" value="submit">Siguiente</button>
+                </div>  
+            </div>
         </form>
         <form class="container gastosExtras">
             <div class="row">
                 <div class="col-md-8">
-                    <h1>Por ultimo, tus gastos extras!</h1>
-                    <div class="col-md-4 botones-div">
-                        <button type="button" class="btn btn-outline-primary botones" id="bt_extrasVolver" value="submit">Volver</button>
-                    </div>
-                    <div class="col-md-4 botones-div">
-                        <button type="button" class="btn btn-outline-primary botones"  id="bt_gastosExtras" value="submit">Calcular</button>
-                    </div>  
+                    <h1>Por ultimo, tus gastos extras!</h1> 
                 </div>
                 <div class="col-md-2">
                     <label class="form-label">Tv/Telefono</label>
@@ -211,6 +224,14 @@
                         <input type="number" class="form-control" id="otros" aria-describedby="basic-addon3" value="">
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 botones-div">
+                    <button type="button" class="btn btn-outline-primary botones" id="bt_extrasVolver" value="submit">Volver</button>
+                </div>
+                <div class="col-md-4 botones-div">
+                    <button type="button" class="btn btn-outline-primary botones"  id="bt_gastosExtras" value="submit">Calcular</button>
+                </div> 
             </div>
         </form>
         <div class="container calculo">
